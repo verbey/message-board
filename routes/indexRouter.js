@@ -16,3 +16,9 @@ const messages = [
 		added: new Date(),
 	},
 ];
+
+module.exports = (app) => {
+	app.get('/', (req, res) => {
+		res.render('index', { title: 'Mini Message Board', messages });
+	});
+};
