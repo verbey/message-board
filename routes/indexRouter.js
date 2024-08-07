@@ -1,3 +1,5 @@
+const express = require('express');
+
 const messages = [
 	{
 		text: 'Hi there!',
@@ -16,8 +18,10 @@ const messages = [
 	},
 ];
 
-module.exports = (app) => {
-	app.get('/', (req, res) => {
-		res.render('index', { title: 'Mini Message Board', messages });
-	});
-};
+const router = express.Router();
+
+router.get('/', (res, req) => {
+	req.render('index', { title: 'Mini Message Board', messages: messages });
+});
+
+module.exports = router;
