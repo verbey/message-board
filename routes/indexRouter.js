@@ -20,8 +20,8 @@ const messages = [
 
 const router = express.Router();
 
-router.get('/', (res, req) => {
-	req.render('index', { title: 'Mini Message Board', messages: messages });
+router.get('/', (req, res) => {
+	res.render('index', { title: 'Mini Message Board', messages: messages });
 });
 
 module.exports = router;
