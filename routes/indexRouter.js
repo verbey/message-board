@@ -10,7 +10,6 @@ const messages = [
 		added: new Date(),
 	},
 	{
-		// generate text field with a long lorem ipsum message
 		text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec semper tellus. Fusce sit amet nibh vitae orci semper tincidunt. ',
 		user: 'Bob',
 		added: new Date(),
