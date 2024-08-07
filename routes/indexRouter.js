@@ -18,17 +18,17 @@ const messages = [
 	},
 ];
 
-const router = express.Router();
+const indexRouter = express.Router();
 
-router.get('/', (req, res) => {
+indexRouter.get('/', (req, res) => {
 	res.render('index', { title: 'Mini Message Board', messages: messages });
 });
 
-router.get('/new', (req, res) => {
+indexRouter.get('/new', (req, res) => {
 	res.render('form');
 });
 
-router.post('/new', (req, res) => {
+indexRouter.post('/new', (req, res) => {
 	messages.push({
 		text: req.body.message,
 		user: req.body.user,
@@ -37,4 +37,4 @@ router.post('/new', (req, res) => {
 	res.redirect('/');
 });
 
-module.exports = router;
+module.exports = { indexRouter, messages };
