@@ -1,10 +1,8 @@
 const express = require('express');
-const messages = require('../data/messages');
+const messageController = require('../controllers/messageController');
 
 const router = express.Router();
 
-router.get('/:id', (req, res) => {
-	res.render('message', { message: messages[req.params.id] });
-});
+router.get('/:id', messageController);
 
 module.exports = router;
