@@ -1,5 +1,5 @@
 const express = require('express');
-const { messages } = require('./indexRouter');
+const messages = require('../data/messages');
 
 const router = express.Router();
 

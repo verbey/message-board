@@ -1,22 +1,6 @@
 const express = require('express');
 
-const messages = [
-	{
-		text: 'Hi there!',
-		user: 'Amando',
-		added: new Date(),
-	},
-	{
-		text: 'Hello World!',
-		user: 'Charles',
-		added: new Date(),
-	},
-	{
-		text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec semper tellus. Fusce sit amet nibh vitae orci semper tincidunt. ',
-		user: 'Bob',
-		added: new Date(),
-	},
-];
+const messages = require('../data/messages');
 
 const indexRouter = express.Router();
 
@@ -37,4 +21,4 @@ indexRouter.post('/new', (req, res) => {
 	res.redirect('/');
 });
 
-module.exports = { indexRouter, messages };
+module.exports = indexRouter;
